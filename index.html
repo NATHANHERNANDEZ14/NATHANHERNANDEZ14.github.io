@@ -11,6 +11,8 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+
+    
     <!-- ==========================================
                   Custom CSS
     =========================================== -->
@@ -259,5 +261,18 @@
                   Custom Js
     =========================================== -->
     <script src="main.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.querySelector('.navbar');
+    
+        menuIcon.addEventListener('click', () => {
+          navbar.classList.toggle('active');
+        });
+      });
+    </script>
+    
+
   </body>
 </html>

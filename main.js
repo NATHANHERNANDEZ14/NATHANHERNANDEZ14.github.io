@@ -73,3 +73,10 @@ const typed = new Typed(".multiple-text", {
   backDelay: 1000,
   loop: true,
 });
+
+/* ===================== 
+    NADVDAR
+====================== */
+document.getElementById('menu-icon').addEventListener('click', () => {
+  document.querySelector('.navbar').classList.toggle('active');
+});
