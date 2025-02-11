@@ -21,7 +21,7 @@
                   Breakpoint
     =========================================== -->
     <link rel="stylesheet" href="breakpoint.css" />
-    <title>My Portfolio</title>
+    <title>Mi Portafolio</title>
   </head>
   <body>
     <!-- ==========================================
@@ -60,7 +60,7 @@
       </div>
 
       <div class="home-img">
-        <img src="assets/image/home1.png" alt="home" />
+        <img src="assets/image/perfil.jpg" alt="home" />
       </div>
     </section>
 
@@ -69,7 +69,7 @@
     =========================================== -->
     <section class="about" id="about">
       <div class="about-img">
-        <img src="assets/image/home1.png" alt="about" />
+        <img src="assets/image/perfil.jpg" alt="about" />
       </div>
 
       <div class="about-content">
@@ -210,27 +210,28 @@
     =========================================== -->
     <section class="contact" id="contact">
       <h2 class="heading">Mi <span>contacto</span></h2>
-
-      <form action="#">
+    
+      <form action="https://wa.me/7293479153?text=Nombre:%20[Nombre]%0AEmail:%20[Email]%0ATeléfono:%20[Teléfono]%0AAsunto:%20[Asunto]%0AMensaje:%20[Mensaje]" method="GET">
         <div class="input-box">
-          <input type="text" placeholder="Nombre completo" />
-          <input type="email" placeholder="Dirección de correo electrónico" />
+          <input type="text" placeholder="Nombre completo" name="Nombre" required />
+          <input type="email" placeholder="Dirección de correo electrónico" name="Email" required />
         </div>
-
+    
         <div class="input-box">
-          <input type="number" placeholder="Teléfono móvil" />
-          <input type="text" placeholder="Asunto del correo electrónico" />
+          <input type="number" placeholder="Teléfono móvil" name="Teléfono" required />
+          <input type="text" placeholder="Asunto del correo electrónico" name="Asunto" required />
         </div>
         <textarea
-          name=""
-          id=""
+          name="Mensaje"
           cols="30"
           rows="10"
           placeholder="Tu mensaje"
+          required
         ></textarea>
         <input type="submit" value="Enviar mensaje" class="btn" />
       </form>
     </section>
+    
 
     <!-- ==========================================
                     Footer
@@ -270,6 +271,24 @@
         });
       });
     </script>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const telefono = document.getElementById('telefono').value;
+    const asunto = document.getElementById('asunto').value;
+    const mensaje = document.getElementById('mensaje').value;
+
+    const mensajeWhatsApp = `Nombre: ${nombre}%0AEmail: ${email}%0ATeléfono: ${telefono}%0AAsunto: ${asunto}%0AMensaje: ${mensaje}`;
+
+    const whatsappURL = `https://wa.me/tu-numero-de-whatsapp?text=${encodeURIComponent(mensajeWhatsApp)}`;
+
+    window.location.href = whatsappURL;
+  });
+</script>
     
 
   </body>
