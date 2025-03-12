@@ -13,6 +13,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 
+
   <!-- ==========================================
                   Custom CSS
     =========================================== -->
@@ -41,6 +42,7 @@
       <a href="#contact">Contacto</a>
     </nav>
   </header>
+  
 
   <!-- ==========================================
                   Home Section
@@ -114,12 +116,11 @@
         <i class="fa-solid fa-layer-group"></i>
         <h3>Fullstack</h3>
         <p>
-          En equipo, desarrollé una aplicación móvil usando React Native con Expo y JavaScript.
-          Mi equipo se encargó de configurar el Arduino y la documentación, mientras que yo fui
-          responsable de programar tanto el Frontend como el Backend. La aplicación se conecta
-          a una base de datos MySQL mediante una API, la cual recibe datos del Arduino detector
-          de fugas de gas. La app registra el nivel de gas, la fecha y la hora del registro, y
-          envía notificaciones a los usuarios según su perfil registrado.
+          Como Técnico en Desarrollo de Software y estudiante de Ingeniería, me especializo en el desarrollo 
+          Fullstack, creando soluciones completas tanto en el Frontend como en el Backend. Durante mi estancia 
+          en la universidad, aprendí sobre el diseño e implementación de aplicaciones web y móviles, integración
+          de APIs con bases de datos, validación de formularios y despliegue en producción. Me adapto rápidamente
+          a nuevas tecnologías y me apasiona construir sistemas eficientes, escalables y funcionales.
         </p>
         <a href="proyectos/RESULTADOS OBTENIDOS .pdf" class="btn">Leer más</a>
       </div>
@@ -300,6 +301,26 @@
 
       window.location.href = whatsappURL;
     });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.querySelector("#menu-icon");
+  const navbar = document.querySelector(".navbar");
+
+  if (menuIcon && navbar) {
+    menuIcon.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".navbar a").forEach(link => {
+      link.addEventListener("click", () => {
+        navbar.classList.remove("active");
+      });
+    });
+  }
+});
+
   </script>
 
 

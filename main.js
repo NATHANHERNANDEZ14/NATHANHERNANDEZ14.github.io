@@ -80,3 +80,5 @@ const typed = new Typed(".multiple-text", {
 document.getElementById('menu-icon').addEventListener('click', () => {
   document.querySelector('.navbar').classList.toggle('active');
 });
+
+

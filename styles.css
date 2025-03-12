@@ -550,3 +550,118 @@ span {
 
   .navbar.active { display: flex; }
 }
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background: #222;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.logo span {
+  color: #00bcd4;
+}
+
+/* Navbar en PC */
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #00bcd4;
+}
+
+/* Ícono del menú hamburguesa */
+#menu-icon {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ============================
+   Media Queries para móviles y tablets
+   ============================ */
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 0;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  /* Mostrar menú cuando se active */
+  .navbar.active {
+    display: flex;
+  }
+
+  /* Mostrar ícono de menú en móviles */
+  #menu-icon {
+    display: block;
+  }
+}
+
+/* Ajustes adicionales para celulares pequeños */
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 12px 3%;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  #menu-icon {
+    font-size: 26px;
+  }
+
+  .navbar a {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
