@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ==========================================
+                  Box Icons
+    =========================================== -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+  <!-- ==========================================
+                  Custom CSS
+    =========================================== -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- ==========================================
+                  Breakpoint
+    =========================================== -->
+  <link rel="stylesheet" href="breakpoint.css" />
+  <title>Mi Portafolio</title>
+</head>
+
+<body>
+  <!-- ==========================================
+                    Header
+    =========================================== -->
+  <header class="header">
+    <a href="#" class="logo">Full<span>Stack</span></a>
+
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav class="navbar">
+      <a href="#home" class="active">Inicio</a>
+      <a href="#about">Acerca De Mi</a>
+      <a href="#services">Servicios</a>
+      <a href="#portfolio">Portafolio</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ==========================================
+                  Home Section
+    =========================================== -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h3>Hola soy </h3>
+      <h1>Nathan</h1>
+      <h3>Y yo soy un <span class="multiple-text"></span></h3>
+      <div class="social-media">
+        <a href="https://www.facebook.com/share/1E9X3M1JMt/"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/nathanmoreno8739?igsh=MTd1YTRkY2thc3lqZg=="><i
+            class="bx bxl-instagram-alt"></i></a>
+        <a href="https://wa.me/7228733168"><i class="bx bxl-whatsapp"></i></a>
+        <a href="https://github.com/NATHANHERNANDEZ14" target="_blank"><i class="bx bxl-github"></i></a>
+      </div>
+      <!-- add link for your CV into `href` -->
+      <a href="proyectos/cv.pdf" class="btn" dowland>Descargar CV</a>
+    </div>
+
+    <div class="home-img">
+      <img src="assets/image/perfil.jpg" alt="home" />
+    </div>
+  </section>
+
+  <!-- ==========================================
+                  About Section
+    =========================================== -->
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="assets/image/perfil.jpg" alt="about" />
+    </div>
+
+    <div class="about-content">
+      <h2 class="heading">Acerca <span>De Mi</span></h2>
+      <p>
+        ¡Hola! Soy Nathan, Técnico Universitario en TI, área Desarrollo de Software Multiplataforma.
+        Apasionado por la programación, me especializo en Frontend y Backend, desarrollando soluciones
+        de calidad con un enfoque en aplicaciones web y móviles.Aunque no cuento con experiencia laboral
+        formal, mi formación académica y proyectos universitarios me han preparado para trabajar con bases
+        de datos (MySQL, MongoDB), integración de APIs y despliegue en producción. Me caracterizo por mi
+        compromiso, adaptabilidad y capacidad para trabajar bajo presión, siempre buscando mejorar y perfeccionar
+        mis habilidades.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+                  Services Section
+    =========================================== -->
+  <section class="services" id="services">
+    <h2 class="heading">Mis <span>Servicios</span></h2>
+
+    <div class="services-container">
+      <div class="services-box">
+        <i class="bx bx-code-alt"></i>
+        <h3>Front End</h3>
+        <p>
+          Soy un desarrollador apasionado por el software con experiencia en la creación de interfaces de
+          usuario dinámicas y atractivas. Mi enfoque está en diseñar y desarrollar sitios web y aplicaciones
+          móviles responsivas, optimizadas para ofrecer una experiencia de usuario fluida y efectiva. Utilizo
+          tecnologías como HTML, CSS, JavaScript, React, Bootstrap, y sistemas de control de versiones como Git.
+          Me aseguro de que cada proyecto no solo sea funcional, sino también intuitivo y visualmente atractivo,
+          siempre enfocado en la usabilidad y accesibilidad.
+        </p>
+        <a href="proyectos/RESULTADOS OBTENIDOS .pdf" class="btn">Leer más</a>
+      </div>
+
+      <div class="services-box">
+        <i class="fa-solid fa-layer-group"></i>
+        <h3>Fullstack</h3>
+        <p>
+          En equipo, desarrollé una aplicación móvil usando React Native con Expo y JavaScript.
+          Mi equipo se encargó de configurar el Arduino y la documentación, mientras que yo fui
+          responsable de programar tanto el Frontend como el Backend. La aplicación se conecta
+          a una base de datos MySQL mediante una API, la cual recibe datos del Arduino detector
+          de fugas de gas. La app registra el nivel de gas, la fecha y la hora del registro, y
+          envía notificaciones a los usuarios según su perfil registrado.
+        </p>
+        <a href="proyectos/RESULTADOS OBTENIDOS .pdf" class="btn">Leer más</a>
+      </div>
+
+      <div class="services-box">
+        <i class="bx bx-data"></i>
+        <h3>Back End</h3>
+        <p>
+         De igual manera, soy un joven desarrollador de software con experiencia en backend, creando 
+         soluciones robustas y escalables. A lo largo de mis estudios, he aprendido a usar tecnologías
+          como Node.js, PHP, JavaScript, Python, y bases de datos como MySQL y MongoDB. Me especializo 
+          en diseñar arquitecturas de servidor eficientes, integrar APIs y gestionar bases de datos para
+           optimizar el flujo de datos y asegurar la seguridad. Además, tengo experiencia en el despliegue 
+           de aplicaciones, garantizando un rendimiento óptimo y una experiencia de usuario fluida. 
+           Mis servicios mejoran la velocidad, seguridad y escalabilidad de las aplicaciones, satisfaciendo
+            las necesidades del negocio.
+        </p>
+
+        <a href="#" class="btn">Leer más</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+                  Portfolio Section
+    =========================================== -->
+  <section class="portfolio" id="portfolio">
+    <h2 class="heading">Mis <span>Projectos academicos</span></h2>
+
+    <div class="portfolio-container">
+      <div class="portfolio-box">
+        <img src="assets/image/img2.png" alt="portfolio" />
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Provident, nihil.
+          </p>
+          <a href="#"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+
+      <div class="portfolio-box">
+        <img src="assets/image/img2.png" alt="portfolio" />
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit,
+            dignissimos.
+          </p>
+          <a href="#"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+
+      <div class="portfolio-box">
+        <img src="assets/image/img4.png" alt="portfolio" />
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusamus, sequi!
+          </p>
+          <a href="#"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+
+      <div class="portfolio-box">
+        <img src="assets/image/img4.png" alt="portfolio" />
+        <div class="portfolio-layer">
+          <h4>Sitio Web</h4>
+          <p>
+            Sistema de inventario desarrolado en laravel, php, con base de datos mysql
+          </p>
+          <a href="#"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+
+      <div class="portfolio-box">
+        <img src="assets/image/img6.png" alt="portfolio" />
+        <div class="portfolio-layer">
+          <h4>Aplicacion Movil </h4>
+          <p>
+            Planificador de gastos desarrollado en JavaScript.
+          </p>
+          <a href="#"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+
+      <div class="portfolio-box">
+        <img src="assets/image/img7.jpg" alt="portfolio" />
+        <div class="portfolio-layer">
+          <h4>Sitio Web </h4>
+          <p>
+            Sitio web para un spa integral, brindando al cliente control total sobre su gestión.
+          </p>
+          <a href="proyectos/Sitio Web merrash.pdf"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+                  Contact Section
+    =========================================== -->
+  <section class="contact" id="contact">
+    <h2 class="heading">Mi <span>contacto</span></h2>
+
+    <form
+      action="https://wa.me/7293479153?text=Nombre:%20[Nombre]%0AEmail:%20[Email]%0ATeléfono:%20[Teléfono]%0AAsunto:%20[Asunto]%0AMensaje:%20[Mensaje]"
+      method="GET">
+      <div class="input-box">
+        <input type="text" placeholder="Nombre completo" name="Nombre" required />
+        <input type="email" placeholder="Dirección de correo electrónico" name="Email" required />
+      </div>
+
+      <div class="input-box">
+        <input type="number" placeholder="Teléfono móvil" name="Teléfono" required />
+        <input type="text" placeholder="Asunto del correo electrónico" name="Asunto" required />
+      </div>
+      <textarea name="Mensaje" cols="30" rows="10" placeholder="Tu mensaje" required></textarea>
+      <input type="submit" value="Enviar mensaje" class="btn" />
+    </form>
+  </section>
+
+
+  <!-- ==========================================
+                    Footer
+    =========================================== -->
+  <footer class="footer">
+    <div class="footer-text">
+      <p>Copyright &copy; 2024 by Callmerev | All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-iconTop">
+      <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+                  Scroll Reveal
+    =========================================== -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- ==========================================
+                   Typed Js
+    =========================================== -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <!-- ==========================================
+                  Custom Js
+    =========================================== -->
+  <script src="main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuIcon = document.getElementById('menu-icon');
+      const navbar = document.querySelector('.navbar');
+
+      menuIcon.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+      });
+    });
+  </script>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const telefono = document.getElementById('telefono').value;
+      const asunto = document.getElementById('asunto').value;
+      const mensaje = document.getElementById('mensaje').value;
+
+      const mensajeWhatsApp = `Nombre: ${nombre}%0AEmail: ${email}%0ATeléfono: ${telefono}%0AAsunto: ${asunto}%0AMensaje: ${mensaje}`;
+
+      const whatsappURL = `https://wa.me/tu-numero-de-whatsapp?text=${encodeURIComponent(mensajeWhatsApp)}`;
+
+      window.location.href = whatsappURL;
+    });
+  </script>
+
+
+</body>
+
+</html>
