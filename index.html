@@ -69,7 +69,7 @@
   </section>
 
   <!-- ==========================================
-                  About Section
+                  Acerca Seccion
     =========================================== -->
   <section class="about" id="about">
     <div class="about-img">
@@ -127,16 +127,16 @@
 
       <div class="services-box">
         <i class="bx bx-data"></i>
-        <h3>Back End</h3>
+        <h3>Mantenimiento de Hardware y Software</h3>
         <p>
-         De igual manera, soy un joven desarrollador de software con experiencia en backend, creando 
-         soluciones robustas y escalables. A lo largo de mis estudios, he aprendido a usar tecnologías
-          como Node.js, PHP, JavaScript, Python, y bases de datos como MySQL y MongoDB. Me especializo 
-          en diseñar arquitecturas de servidor eficientes, integrar APIs y gestionar bases de datos para
-           optimizar el flujo de datos y asegurar la seguridad. Además, tengo experiencia en el despliegue 
-           de aplicaciones, garantizando un rendimiento óptimo y una experiencia de usuario fluida. 
-           Mis servicios mejoran la velocidad, seguridad y escalabilidad de las aplicaciones, satisfaciendo
-            las necesidades del negocio.
+          Realizo limpieza y mantenimiento de hardware, incluyendo la eliminación de polvo en componentes internos, 
+          ventiladores, fuente de alimentación y periféricos. También instalo y actualizo componentes como memoria RAM 
+          y discos de estado sólido (SSD) para mejorar el rendimiento del equipo.
+        En el área de software, me encargo de la instalación y configuración de programas esenciales, como Microsoft Word 
+        con licencia permanente, así como cualquier otro software requerido por el cliente. Además, realizo restauraciones
+         de laptops con respaldo de datos, optimización del sistema operativo, eliminación de programas no deseados y 
+         actualización de aplicaciones. También ofrezco servicios de formateo y reinstalación de software para garantizar
+        el mejor desempeño del equipo.
         </p>
 
         <a href="#" class="btn">Leer más</a>
@@ -145,7 +145,7 @@
   </section>
 
   <!-- ==========================================
-                  Portfolio Section
+                  Portafolio Seccion
     =========================================== -->
   <section class="portfolio" id="portfolio">
     <h2 class="heading">Mis <span>Projectos academicos</span></h2>
@@ -223,27 +223,57 @@
   </section>
 
   <!-- ==========================================
-                  Contact Section
+                  Contacto Seccion
     =========================================== -->
-  <section class="contact" id="contact">
-    <h2 class="heading">Mi <span>contacto</span></h2>
-
-    <form
-      action="https://wa.me/7293479153?text=Nombre:%20[Nombre]%0AEmail:%20[Email]%0ATeléfono:%20[Teléfono]%0AAsunto:%20[Asunto]%0AMensaje:%20[Mensaje]"
-      method="GET">
-      <div class="input-box">
-        <input type="text" placeholder="Nombre completo" name="Nombre" required />
-        <input type="email" placeholder="Dirección de correo electrónico" name="Email" required />
-      </div>
-
-      <div class="input-box">
-        <input type="number" placeholder="Teléfono móvil" name="Teléfono" required />
-        <input type="text" placeholder="Asunto del correo electrónico" name="Asunto" required />
-      </div>
-      <textarea name="Mensaje" cols="30" rows="10" placeholder="Tu mensaje" required></textarea>
-      <input type="submit" value="Enviar mensaje" class="btn" />
-    </form>
-  </section>
+    <section class="contact" id="contact">
+      <h2 class="heading">Mi <span>contacto</span></h2>
+    
+      <form id="contact-form">
+        <div class="input-box">
+          <input type="text" id="nombre" placeholder="Nombre completo" name="Nombre" required />
+          <input type="email" id="email" placeholder="Dirección de correo electrónico" name="Email" required />
+        </div>
+    
+        <div class="input-box">
+          <input type="number" id="telefono" placeholder="Teléfono móvil" name="Teléfono" required />
+          <input type="text" id="asunto" placeholder="Asunto del correo electrónico" name="Asunto" required />
+        </div>
+        <textarea id="mensaje" name="Mensaje" cols="30" rows="10" placeholder="Tu mensaje" required></textarea>
+        <input type="submit" value="Enviar mensaje" class="btn" />
+      </form>
+    </section>
+    
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault(); // Evita el envío y recarga de la página
+    
+        // Obtener los valores del formulario
+        const nombre = document.getElementById('nombre').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const telefono = document.getElementById('telefono').value.trim();
+        const asunto = document.getElementById('asunto').value.trim();
+        const mensaje = document.getElementById('mensaje').value.trim();
+    
+        // Validar que los campos no estén vacíos
+        if (!nombre || !email || !telefono || !asunto || !mensaje) {
+          alert("Por favor, completa todos los campos antes de enviar el mensaje.");
+          return false;
+        }
+    
+        // Crear el mensaje para WhatsApp con los datos del formulario (sin las etiquetas)
+        const mensajeWhatsApp = `${nombre} ${email} ${telefono} ${asunto} ${mensaje}`;
+    
+        // Reemplaza 'tu-numero-de-whatsapp' con tu número real (ejemplo: 521234567890)
+        const whatsappURL = `https://wa.me/7293479153?text=${encodeURIComponent(mensajeWhatsApp)}`;
+    
+        // Abrir WhatsApp en una nueva pestaña sin recargar el formulario
+        window.location.href = whatsappURL; // Usar window.location.href en lugar de window.open
+    
+        return false; // Evita que el formulario se resetee
+      });
+    </script>
+    
+    
 
 
   <!-- ==========================================
@@ -284,26 +314,6 @@
       });
     });
   </script>
-
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const nombre = document.getElementById('nombre').value;
-      const email = document.getElementById('email').value;
-      const telefono = document.getElementById('telefono').value;
-      const asunto = document.getElementById('asunto').value;
-      const mensaje = document.getElementById('mensaje').value;
-
-      const mensajeWhatsApp = `Nombre: ${nombre}%0AEmail: ${email}%0ATeléfono: ${telefono}%0AAsunto: ${asunto}%0AMensaje: ${mensaje}`;
-
-      const whatsappURL = `https://wa.me/tu-numero-de-whatsapp?text=${encodeURIComponent(mensajeWhatsApp)}`;
-
-      window.location.href = whatsappURL;
-    });
-  </script>
-
-
 
 </body>
 
