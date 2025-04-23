@@ -664,4 +664,12 @@ span {
     font-size: 16px;
     padding: 12px;
   }
+  video {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* opcional: limita el tamaño en pantallas grandes */
+    border-radius: 12px; /* opcional: bordes redondeados */
+    display: block;
+    margin: 0 auto;
+  }
 }
